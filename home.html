@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTRITION INFORMATION MANAGEMENT</title>
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+<style>
+        img {
+  border-radius: 50%;
+  text-decoration: none;
+}
+.slider-container {
+  width: 1390px; 
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+ 
+   margin-top: -500px;
+   margin-left: 130px;
+}
+
+.slider {
+  display: flex;
+  width: calc(500px * 4); 
+  animation: slide 12s infinite;
+   
+  
+}
+
+.slider img {
+  width: 500px;
+  height: 400px;
+  flex-shrink: 0;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-500px); }
+  50% { transform: translateX(-1000px); }
+  75% { transform: translateX(-1500px); }
+  100% { transform: translateX(0); }
+}
+
+</style>
+<body >
+
+</style>
+    <div class="logo" >
+        <h2> <img src="img/logo.png" alt="name" width="130px" height="130px"></h2>
+     </div>
+    <div class="h">
+
+        
+   
+
+    </div> 
+    
+         <h1>NUTRITION INFORMATION MANAGEMENT SYSTEM</h1>
+   
+    <div class="afya">
+    <ul> <br> <br> <br> 
+        <li><a href="home.html">Home</a></li>
+        <li><a href="creat-account.html">Account</a></li>
+        <li><a href="home.html">Manage patient</a>
+       
+         <ul > <br>
+            <li><a href="register.html">Register new patient</a></li>
+            <li ><a href="second-reg.php">Reattendance</a></li>
+        </ul></li>
+       
+        <li><a href="report.php">Check report</a></li>
+        
+        <li><a href="logout.php">Log out</a></li>
+    </ul>
+    </div>
+
+    </div>
+   
+    <div class="slider-container">
+  <div class="slider">
+    <img src="img/a-removebg-preview.png" alt="Image 1">
+    <img src="img/b-removebg-preview.png" alt="Image 2">
+    <img src="img/c-removebg-preview.png" alt="Image 3">
+    <img src="img/d-removebg-preview.png" alt="Image 4">
+  </div>
+</div>
+
+</body>
+</html>
