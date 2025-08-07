@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #007b5e;
+      padding: 20px;
+    }
+
+    h1 a {
+      text-decoration: none;
+      background-color: #040405;
+      color: white;
+      border-radius: 5px;
+      padding: 8px 15px;
+    }
+
+    h2 {
+      text-align: center;
+      color: white;
+      margin-top: -30px;
+    }
+
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      padding: 12px;
+      vertical-align: top;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 95%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      box-sizing: border-box;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="date"]:focus,
+    input[type="tel"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+      outline: none;
+    }
+
+    select {
+      background-color: #fff;
+    }
+
+    textarea {
+      height: 80px;
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #218838;
+    }
+
+    .gender-options {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      table, tbody, tr, td {
+        display: block;
+        width: 100%;
+      }
+
+      td {
+        padding: 10px 0;
+      }
+
+      .gender-options {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1><a href="home.html">HOME</a></h1>
+  <h2>Register New Patient</h2>
+
+  <form action="reg.php" method="POST">
+    <table>
+      <tr>
+        <td><label for="patientid">Patient ID</label></td>
+        <td><input type="text" name="patientid" required></td>
+        <td><label for="patientname">Patient Name</label></td>
+        <td><input type="text" name="patientname" required></td>
+      </tr>
+
+      <tr>
+        <td><label for="dateofbirth">Date of Birth</label></td>
+        <td><input type="date" name="dateofbirth" required></td>
+        <td><label>Sex</label></td>
+        <td class="gender-options">
+          <label><input type="radio" name="sex" value="Male" required> Male</label>
+          <label><input type="radio" name="sex" value="Female"> Female</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="age">Age</label></td>
+        <td><input type="text" name="age"></td>
+        <td><label for="phoneno">Phone Number</label></td>
+        <td><input type="tel" name="phoneno" pattern="[0-9+]{10,15}"></td>
+      </tr>
+
+      <tr>
+        <td><label for="diagnosis">Diagnosis/Nutrition Status</label></td>
+        <td><input type="text" name="diagnosis"></td>
+        <td><label for="weight">Weight (kg)</label></td>
+        <td><input type="text" name="weight"></td>
+      </tr>
+
+      <tr>
+        <td><label for="height">Height (cm)</label></td>
+        <td><input type="text" name="height"></td>
+        <td><label for="muac">MUAC (cm)</label></td>
+        <td><input type="text" name="muac"></td>
+      </tr>
+
+      <tr>
+        <td><label for="pressure">Pressure (mmHg)</label></td>
+        <td><input type="text" name="pressure"></td>
+        <td><label for="servicename">Service Name</label></td>
+        <td><input type="text" name="servicename"></td>
+      </tr>
+
+      <tr>
+        <td><label for="patientgroup">Patient Group</label></td>
+        <td>
+          <select name="patientgroup">
+            <option value="under5">Under 5</option>
+            <option value="adult">Adult</option>
+            <option value="perschoolchildren">Preschool Children</option>
+            <option value="pregnantwomen">Pregnant Women</option>
+            <option value="elder">Elders</option>
+            <option value="above60">Above 60</option>
+          </select>
+        </td>
+        <td><label for="price">Price</label></td>
+        <td><input type="text" name="price"></td>
+      </tr>
+
+      <tr>
+        <td><label for="phistory">Patient History</label></td>
+        <td colspan="3"><textarea name="phistory" placeholder="Enter patient history..."></textarea></td>
+      </tr>
+
+      <tr>
+        <td><label for="followup">Follow Up</label></td>
+        <td><textarea name="followup" placeholder="Enter follow up details..."></textarea></td>
+        <td><label for="planning">Planning</label></td>
+        <td><textarea name="planning" placeholder="Enter planning details..."></textarea></td>
+      </tr>
+
+      <tr>
+        <td><label for="registrationdate">Date</label></td>
+        <td><input type="date" name="registrationdate"></td>
+        <td><label for="referal">Referral</label></td>
+        <td>
+          <select name="referal">
+            <option value="referal">Referal/non referal</option>
+            <option value="nonreferal">Non Referral</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="4" style="text-align: center;">
+          <input type="submit" value="Submit">
+        </td>
+      </tr>
+    </table>
+  </form>
+
+</body>
+</html>
