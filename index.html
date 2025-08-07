@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Nutrition Info System</title>
+    <style>
+        body {
+          background-color:  #56ab2f;
+          
+        }
+
+        .login {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px ;
+        
+            width: 100%;
+            max-width: 400px;
+            margin-left: 440px;
+            margin-top: 40px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #333;
+            ;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px 12px ;
+            margin-bottom: 18px;
+            margin-left: -10px;
+           
+            border-radius: 6px;
+         
+        }
+
+        
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            
+            font-size: 16px;
+        
+        }
+        h4{
+            margin-left: 1px;
+        }
+        a{
+            text-decoration: none;
+        
+        }
+
+     
+    </style>
+</head>
+<body>
+
+<div class="login">
+    <h2>NUTRITION INFORMATION MANAGEMENT SYSTEM</h2>
+    <form action="home.html" method="post">
+        <label for="username"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+</svg>Username</label>
+        <input type="text" name="username"  placeholder="Enter your username" required>
+
+        <label for="password"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4m0 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3"/>
+</svg>Password</label>
+        <input type="password" name="password"placeholder="Enter your password" required>
+
+        <input type="submit" value="Login">
+        
+ <h4><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-unlock-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M12 0a4 4 0 0 1 4 4v2.5h-1V4a3 3 0 1 0-6 0v2h.5A2.5 2.5 0 0 1 12 8.5v5A2.5 2.5 0 0 1 9.5 16h-7A2.5 2.5 0 0 1 0 13.5v-5A2.5 2.5 0 0 1 2.5 6H8V4a4 4 0 0 1 4-4"/>
+</svg><a href="">forgot password</a></h4>
+    </form>
+</div>
+
+</body>
+</html>
