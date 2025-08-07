@@ -1,0 +1,68 @@
+body{
+    background-color: #ffdb58;
+}
+.afya{
+    width: 130px;
+    height: 500px;
+    background-color: orange;
+    margin-left: 1px;
+    border-radius: 0px 0px 20px 20px;
+    margin-top: 42px;
+}
+ul{
+    font-size: 15px;
+}
+
+   
+
+h1{
+    margin-left: 220px;
+    color: white;
+    margin-top: -80px;
+    
+}
+.h{
+   background-color: #007b5e;
+    
+    
+    height: 150px;
+    margin-top: -190px;
+    
+}
+ul {
+    list-style: none;
+    margin-left: -35px;
+   
+    
+    
+}
+ul li{
+    margin-bottom: 34px;
+
+    
+
+}
+ul li a{
+text-decoration: none;
+     color: white;
+
+
+}
+ul li a:hover{
+    color:black;
+}
+ul li ul{
+    display: none;
+    margin-left: -42px;
+}
+ul li:hover ul{
+    display: block;
+    
+}
+.logo{
+    margin-top: -10px;
+}
+.lay{
+    margin-left: 450px;
+    margin-top: -350px;
+}
